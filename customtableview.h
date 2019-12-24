@@ -2,10 +2,11 @@
 #define CUSTOMTABLEVIEW_H
 #include <QTableView>
 #include "cmcontextmenu.h"
-#include <QSqlTableModel>
+#include <QSqlRelationalTableModel>
 #include <QHeaderView>
 #include "sqlutil.h"
 #include <QDebug>
+#include <QSqlRelationalTableModel>
 
 class CustomTableView : public QTableView
 {

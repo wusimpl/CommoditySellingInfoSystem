@@ -62,29 +62,31 @@ void MainWindow::on_CMAction_triggered()
     ui->StackedWidget->setCurrentWidget(pages[0]);
 }
 
+//商品统计页面
 void MainWindow::on_CSAction_triggered()
 {
-    if(pages[1] == nullptr){
-        pages[1] = new CsPage();
-        ui->StackedWidget->addWidget(pages[1]);
-    }
+    if(pages[1] != nullptr)
+        delete pages[1];
+    pages[1] = new CsPage();
+    ui->StackedWidget->addWidget(pages[1]);
     ui->StackedWidget->setCurrentWidget(pages[1]);
 }
 
+//商品销售页面
 void MainWindow::on_SellingAction_triggered()
 {
-    if(pages[2] == nullptr){
-        pages[2] = new SellingPage();
-        ui->StackedWidget->addWidget(pages[2]);
-    }
+    if(pages[2] != nullptr)
+        delete pages[2];
+    pages[2] = new SellingPage();
+    ui->StackedWidget->addWidget(pages[2]);
     ui->StackedWidget->setCurrentWidget(pages[2]);
 }
 
 void MainWindow::on_SSAction_triggered()
 {
-    if(pages[2] == nullptr){
-        pages[2] = new CsPage();
-        ui->StackedWidget->addWidget(pages[2]);
-    }
-    ui->StackedWidget->setCurrentWidget(pages[2]);
+    if(pages[3] != nullptr)
+        delete pages[3];
+    pages[3] = new SellingPage();
+    ui->StackedWidget->addWidget(pages[3]);
+    ui->StackedWidget->setCurrentWidget(pages[3]);
 }

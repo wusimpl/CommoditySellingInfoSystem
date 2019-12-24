@@ -32,3 +32,6 @@ void SQLUtil::connectDB(QWidget* parent)
     }
 }
 
+QString SQLUtil::lastError(){
+    return db->lastError().text();
+}

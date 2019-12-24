@@ -27,7 +27,7 @@
           <item>
            <widget class="QToolButton" name="submitActionButton">
             <property name="text">
-             <string extracomment="提交到数据库">提交</string>
+             <string extracomment="提交到数据库">提交(刷新)</string>
             </property>
             <property name="icon">
              <iconset resource="res.qrc">

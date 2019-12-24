@@ -18,6 +18,8 @@ public:
 
     static QSqlQuery* query;
 
+    static QString lastError();
+
     const static QString SHOW_TABLES;
 };
 

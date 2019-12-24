@@ -19,21 +19,17 @@ CustomTableView::CustomTableView(QString tableName)
 }
 
 
-
-//void CustomTableView::initModel(QSqlTableModel *model)
-//{
-//    model->setEditStrategy(QSqlTableModel::OnManualSubmit);//手动提交更改
-
-//}
-
 void CustomTableView::setupModels(QString tableName){
     //set model
-    model = new QSqlTableModel(this);
-    model->setEditStrategy(QSqlTableModel::OnManualSubmit);//手动提交
+    if(tableName.compare("order") == 0){
+        model = new QSqlTableModel (this);
+    }else{
+        model = new QSqlRelationalTableModel(this);
+    }
+    model->setEditStrategy(QSqlRelationalTableModel::OnManualSubmit);//手动提交
     model->setTable(tableName);
     this->setModel(model);
     model->select();//获取数据
-
 }
 
 
@@ -46,6 +42,7 @@ void CustomTableView::onRightClickMenu(QPoint pos)
         menu.exec(QCursor::pos()); // 菜单出现的位置为当前鼠标的位置
     }
 }
+
 
 QSqlTableModel *CustomTableView::getModel() const
 {
