@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>927</width>
+    <height>681</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QStackedWidget" name="StackedWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="CommodityManagingPage">
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="0" column="0">
+         <widget class="QTabWidget" name="CommodityManagingTabWidget">
+          <property name="currentIndex">
+           <number>1</number>
+          </property>
+          <widget class="QWidget" name="tab">
+           <attribute name="title">
+            <string>Tab 1</string>
+           </attribute>
+          </widget>
+          <widget class="QWidget" name="tab_2">
+           <attribute name="title">
+            <string>Tab 2</string>
+           </attribute>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="CommodityStatisticsPage"/>
+      <widget class="QWidget" name="CommoditySellingPage"/>
+      <widget class="QWidget" name="OrderDetailStatisticsPage"/>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>927</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="SellingMenu">
+    <property name="title">
+     <string>销售管理</string>
+    </property>
+    <addaction name="SellingAction"/>
+    <addaction name="SSAction"/>
+   </widget>
+   <widget class="QMenu" name="ManagementMenu">
+    <property name="title">
+     <string>商品管理</string>
+    </property>
+    <addaction name="CMAction"/>
+    <addaction name="CSAction"/>
+   </widget>
+   <addaction name="SellingMenu"/>
+   <addaction name="ManagementMenu"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="CMAction">
+   <property name="text">
+    <string>管理商品数据</string>
+   </property>
+  </action>
+  <action name="CSAction">
+   <property name="text">
+    <string>商品统计</string>
+   </property>
+  </action>
+  <action name="SellingAction">
+   <property name="text">
+    <string>商品销售</string>
+   </property>
+  </action>
+  <action name="SSAction">
+   <property name="text">
+    <string>统计</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
